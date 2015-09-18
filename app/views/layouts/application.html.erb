@@ -7,9 +7,7 @@
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="<%= @page_class %>">
+  <%= yield %>
 </body>
 </html>
