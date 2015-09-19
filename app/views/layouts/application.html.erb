@@ -8,6 +8,19 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body class="<%= @page_class %>">
+
+  <!-- FLASH NOTICE -->
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <%= render 'layouts/navbar' %>
+
   <%= yield %>
+
+
 </body>
 </html>

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
 
   root 'welcome#index'
-  
+
+  # Default routes for devise
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  # Adding a few convenience routes
+  devise_scope :user do
+    get "login", to: "devise/sessions#new"
+    get "sign_up", to: "devise/registrations#new"
+    get "signup", to: "devise/registrations#new"
+  end
 end
