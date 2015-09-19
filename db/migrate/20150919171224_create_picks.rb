@@ -5,7 +5,7 @@ class CreatePicks < ActiveRecord::Migration
       t.integer :game_id
       t.integer :team_id
       t.boolean :bonus, default: false
-      t.integer :rank, default: 0
+      t.integer :rank
 
       t.timestamps null: false
     end
