@@ -1,7 +1,36 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# CREATE TEAMS
+# ------------
+
+Team.create(city: "Arizona", name: "Cardinals")
+Team.create(city: "Atlanta", name: "Falcons")
+Team.create(city: "Baltimore", name: "Ravens")
+Team.create(city: "Buffalo", name: "Bills")
+Team.create(city: "Carolina", name: "Panthers")
+Team.create(city: "Chicago", name: "Bears")
+Team.create(city: "Cincinnati", name: "Bengals")
+Team.create(city: "Cleveland", name: "Browns")
+Team.create(city: "Dallas", name: "Cowboys")
+Team.create(city: "Denver", name: "Broncos")
+Team.create(city: "Detroit", name: "Lions")
+Team.create(city: "Green Bay", name: "Packers")
+Team.create(city: "Houston", name: "Texans")
+Team.create(city: "Indianapolis", name: "Colts")
+Team.create(city: "Jacksonville", name: "Jaguars")
+Team.create(city: "Kansas City", name: "Chiefs")
+Team.create(city: "Miami", name: "Dolphins")
+Team.create(city: "Minnesota", name: "Vikings")
+Team.create(city: "New England", name: "Patriots")
+Team.create(city: "New Orleans", name: "Saints")
+Team.create(city: "New York", name: "Giants")
+Team.create(city: "New York", name: "Jets")
+Team.create(city: "Oakland", name: "Raiders")
+Team.create(city: "Philadelphia", name: "Eagles")
+Team.create(city: "Pittsburgh", name: "Steelers")
+Team.create(city: "San Diego", name: "Chargers")
+Team.create(city: "San Francisco", name: "49ers")
+Team.create(city: "Seattle", name: "Seahawks")
+Team.create(city: "St. Louis", name: "Rams")
+Team.create(city: "Tampa Bay", name: "Buccaneers")
+Team.create(city: "Tennessee", name: "Titans")
+Team.create(city: "Washington", name: "Redskins")
