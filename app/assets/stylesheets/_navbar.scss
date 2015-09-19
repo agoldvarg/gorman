@@ -5,7 +5,11 @@
   text-transform: uppercase;
 
   .container-fluid {
-    padding: 0 10px;
+    padding: 0 20px;
+
+    .navbar-header {
+      display: inline-block;
+    }
 
     .navbar-user-status {
       float: right;
@@ -19,6 +23,8 @@
       .session-links {
         display: flex;
         justify-content: flex-end;
+        font-size: 12px;
+        font-weight: 500;
 
         a {
           margin: 0 5px;

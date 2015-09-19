@@ -23,6 +23,12 @@
 body {
 }
 
+.well {
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px;
+  border: none;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
