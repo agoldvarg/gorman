@@ -7,9 +7,9 @@ class GameScraper
 
   attr_reader :game_objects
 
-  def initialize(week)
+  def initialize
     @url = ESPN_URL
-    @week = week
+    @week = ENV["CURRENT_WEEK"]
     @game_objects = []
   end
 

@@ -1,4 +1,56 @@
 <div class="container">
-  <div class="well">
+  <div class="row col-md-6">
+
+    <h2 class="section-header">Week <%= @current_week %> Spreads</h2>
+
+    <div class="well">
+      <div class="spreads-table">
+        <table class="table">
+          <tr class="header-row">
+            <th>(-/+)</th>
+            <th>AWAY</th>
+            <th>HOME</th>
+            <th>(-/+)</th>
+          </tr>
+          <% @games.each do |game| %>
+            <tr class="data-row">
+              <% if game.spread < 0 %>
+                <td><a href="#" data-remote="true"><%= game.spread.abs %></a></td>
+                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
+                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
+                <td><a href="#" data-remote="true">-</a></td>
+              <% elsif game.spread > 0%>
+                <td><a href="#" data-remote="true">-</a></td>
+                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
+                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
+                <td><a href="#" data-remote="true"><%= game.spread %></a></td>
+              <% elsif game.spread > 0%>
+                <td><a href="#" data-remote="true">-</a></td>
+                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
+                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
+                <td><a href="#" data-remote="true">-</a></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row col-md-6">
+
+    <h2 class="section-header">Standings</h2>
+
+    <div class="well">
+      <div class="spreads-table">
+        <table class="table">
+          <tr class="header-row">
+            <th>Name</th>
+            <th>(W/L)</th>
+            <th class="yellow">(W/L)</th>
+            <th>Total</th>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

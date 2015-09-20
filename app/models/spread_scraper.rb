@@ -9,7 +9,7 @@ class SpreadScraper
 
   def initialize(week)
     @url = CBS_URL
-    @week = week
+    @week = ENV["CURRENT_WEEK"]
     @spreads = []
   end
 

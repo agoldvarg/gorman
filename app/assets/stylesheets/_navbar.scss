@@ -12,8 +12,11 @@
     }
 
     .navbar-user-status {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       float: right;
-      margin-top: 5px;
+      height: 48px;
 
       .welcome-message {
         margin: 0;

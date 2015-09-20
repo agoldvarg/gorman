@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'pg'
 gem 'slim-rails'
+gem 'figaro'
 
 group :test, :development do
   gem 'awesome_print'

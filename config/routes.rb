@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/picks/new' => 'picks#new'
+
   # Default routes for devise
   devise_for :users, :controllers => { registrations: 'registrations' }
 

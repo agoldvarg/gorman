@@ -3,5 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .welcome-page {
+  .section-header {
+    text-align: center;
+    margin-top: 0;
+  }
 
+  .spreads-table {
+
+    .header-row {
+      border-bottom: 2px solid red;
+    }
+
+    th, td {
+      border-top: none;
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+      vertical-align: middle;
+
+      a {
+        display: block;
+        color: black;
+        cursor: default;
+
+        &:hover {
+          text-decoration: none;
+          color: black;
+          cursor: default;
+        }
+      }
+
+      .yellow {
+        color: yellow;
+      }
+    }
+
+    .data-row {
+      text-align: center;
+      border-bottom: 1px solid lightgrey;
+      font-weight: 300;
+      -o-transition:font-weight .08s ease-out, background .08s ease-out;
+      -ms-transition:font-weight .08s ease-out, background .08s ease-out;
+      -moz-transition:font-weight .08s ease-out, background .08s ease-out;
+      -webkit-transition:font-weight .08s ease-out, background .08s ease-out;
+      transition:font-weight .08s ease-out, background .08s ease-out;
+
+      &:hover {
+        font-weight: 600;
+        background:white;
+      }
+    }
+  }
 }
