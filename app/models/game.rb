@@ -5,4 +5,13 @@ class Game < ActiveRecord::Base
   def teams
     [away_team, home_team]
   end
+
+  def matchup(long=false)
+    if long
+      "#{away_team.long_name} at #{home_team.long_name}"
+    else
+      "#{away_team.abbr} at #{home_team.abbr}"
+    end
+  end
+
 end

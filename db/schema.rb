@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150919204159) do
     t.integer  "home_team_id"
     t.integer  "away_team_id"
     t.integer  "week"
-    t.integer  "spread"
+    t.float    "spread"
     t.integer  "result"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150919204159) do
     t.integer  "game_id"
     t.integer  "team_id"
     t.boolean  "bonus",      default: false
-    t.integer  "rank",       default: 0
+    t.integer  "rank"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end

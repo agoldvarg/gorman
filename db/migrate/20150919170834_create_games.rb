@@ -4,7 +4,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :home_team_id
       t.integer :away_team_id
       t.integer :week
-      t.integer :spread
+      t.float   :spread
       t.integer :result
 
       t.timestamps null: false
