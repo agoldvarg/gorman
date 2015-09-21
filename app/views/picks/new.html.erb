@@ -1,5 +1,19 @@
 <div class="container">
-  <div class="well">
-  <h2>It's Week <%= ENV["CURRENT_WEEK"] %></h2>
+  <div class="row col-md-12">
+    <h2 class="section-header">Current Picks for Week <%= @current_week %></h2>
+  </div>
+
+  <div class="row col-md-6">
+    <div class="well">
+
+      <%= render 'form' %>
+
+    </div>
+  </div>
+
+  <div class="row col-md-5 col-md-offset-1">
+    <div class="well">
+      <button class="centered-content" type="button" name="button">SAVE PICKS</button>
+    </div>
   </div>
 </div>

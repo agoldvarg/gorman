@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// VARS
+$green: #009900;
+
 .welcome-page {
   .section-header {
     text-align: center;
@@ -15,33 +19,20 @@
     }
 
     th, td {
-      border-top: none;
-      text-align: center;
+      vertical-align: middle;
+      cursor: default;
       margin: 0;
       padding: 10px;
-      vertical-align: middle;
 
-      a {
-        display: block;
-        color: black;
-        cursor: default;
-
-        &:hover {
-          text-decoration: none;
-          color: black;
-          cursor: default;
-        }
-      }
-
-      .yellow {
-        color: yellow;
-      }
+      text-align: center;
+      border-top: none;
     }
 
     .data-row {
       text-align: center;
       border-bottom: 1px solid lightgrey;
       font-weight: 300;
+
       -o-transition:font-weight .08s ease-out, background .08s ease-out;
       -ms-transition:font-weight .08s ease-out, background .08s ease-out;
       -moz-transition:font-weight .08s ease-out, background .08s ease-out;
@@ -50,7 +41,26 @@
 
       &:hover {
         font-weight: 600;
-        background:white;
+        background: white;
+      }
+
+      td.team-abbr {
+        cursor: pointer;
+      }
+
+      td.selected {
+        font-weight: 600;
+        color: $green;
+        border: none;
+        padding: 9px;
+
+        span {
+          display: block;
+          background-color: #F5F5F5;
+          border: 1px solid $green;
+          border-radius: 1px;
+          box-shadow: 1px 1px 3px;
+        }
       }
     }
   }

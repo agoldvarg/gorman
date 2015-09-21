@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row col-md-6">
+  <div class="row col-md-7">
 
     <h2 class="section-header">Week <%= @current_week %> Spreads</h2>
 
@@ -7,28 +7,28 @@
       <div class="spreads-table">
         <table class="table">
           <tr class="header-row">
-            <th>(-/+)</th>
+            <th>(+)</th>
             <th>AWAY</th>
             <th>HOME</th>
-            <th>(-/+)</th>
+            <th>(+)</th>
           </tr>
           <% @games.each do |game| %>
             <tr class="data-row">
               <% if game.spread < 0 %>
-                <td><a href="#" data-remote="true"><%= game.spread.abs %></a></td>
-                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
-                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
-                <td><a href="#" data-remote="true">-</a></td>
+                <td class="spread away"><span><%= game.spread.abs %></span></td>
+                <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+                <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+                <td><span>-</span></td>
               <% elsif game.spread > 0%>
-                <td><a href="#" data-remote="true">-</a></td>
-                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
-                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
-                <td><a href="#" data-remote="true"><%= game.spread %></a></td>
+                <td><span>-</span></td>
+                <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+                <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+                <td class="spread home"><span><%= game.spread %></span></td>
               <% elsif game.spread > 0%>
-                <td><a href="#" data-remote="true">-</a></td>
-                <td><a href="#" data-remote="true"><%= game.away_team.abbr %></a></td>
-                <td><a href="#" data-remote="true"><%= game.home_team.abbr %></a></td>
-                <td><a href="#" data-remote="true">-</a></td>
+                <td><span>-</span></td>
+                <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+                <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+                <td><span>-</span></td>
               <% end %>
             </tr>
           <% end %>
@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  <div class="row col-md-6">
+  <div class="row col-md-4 col-md-offset-1" >
 
     <h2 class="section-header">Standings</h2>
 

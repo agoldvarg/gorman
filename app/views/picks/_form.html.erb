@@ -1,0 +1,30 @@
+<div class="spreads-table">
+  <table class="table">
+    <tr class="header-row">
+      <th>(+)</th>
+      <th>AWAY</th>
+      <th>HOME</th>
+      <th>(+)</th>
+    </tr>
+    <% @games.each do |game| %>
+      <tr class="data-row">
+        <% if game.spread < 0 %>
+          <td class="spread away"><span><%= game.spread.abs %></span></td>
+          <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+          <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+          <td><span>-</span></td>
+        <% elsif game.spread > 0%>
+          <td><span>-</span></td>
+          <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+          <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+          <td class="spread home"><span><%= game.spread %></span></td>
+        <% elsif game.spread > 0%>
+          <td><span>-</span></td>
+          <td class="team-abbr away"><span><%= game.away_team.abbr %></span></td>
+          <td class="team-abbr home"><span><%= game.home_team.abbr %></span></td>
+          <td><span>-</span></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
